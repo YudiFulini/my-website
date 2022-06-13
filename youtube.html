@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyTube</title>
+
+    <link rel="stylesheet" href="./styles/video.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/general.css">
+    <link rel="stylesheet" href="./styles/sidebar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+  </head>
+
+  <body>
+    <!---HEADER PART-->
+    <header class="header">
+
+      <div class="left-section">
+        <img class="hamburger-menu" src="./img/icons/hamburger-menu.svg">
+        <img class="youtube-logo" src="./img/icons/metube-logo.jpg">
+      </div>
+
+      <div class="middle-section">
+        <input class = "search-bar" type="textbox" placeholder="Search">
+        <button class="search-button">
+          <img class="search-icon" src = "./img/icons/search.svg">
+          <div class="tooltip">Search</div>
+        </button>
+        <button class="voice-search-button">
+          <img class = "voice-search-icon" src="./img/icons/voice-search-icon.svg">
+          <div class="tooltip">Search with your voice</div>
+        </button>
+      </div>
+
+      <div class="right-section">
+        <div class="upload-icon-container">
+          <img class="upload-icon" src="./img/icons/upload.svg">
+          <div class="tooltip">Create</div>
+        </div>
+        <div class = youtube-apps-icon-container>
+          <img class="youtube-apps-icon" src="./img/icons/youtube-apps.svg">
+          <div class="tooltip">YouTube Apps</div>
+        </div>
+        <div class="notifications-icon-container">
+          <img class= "notifications-icon" src="./img/icons/notifications.svg">
+          <div class="notifications-count">69</div>
+          <div class="tooltip">Notifications</div>
+        </div>
+        <div class="my-channel-icon-container">
+          <img class="my-channel-icon" src="./img/profile/my-channel.png">
+        </div>
+        
+      </div>
+      
+    </header>
+
+
+    <!---SIDEBAR PART-->
+    <nav class="sidebar">
+      <div class="sidebar-link">
+        <img class="sidebar-icons" src="./img/icons/home.svg">
+        <div>Home</div>
+      </div>
+      <div class="sidebar-link">
+        <img class="sidebar-icons" src="./img/icons/explore.svg">
+        <div>Explore</div>
+      </div>
+      <div class="sidebar-link">
+        <img class="sidebar-icons" src="./img/icons/subscriptions.svg">
+        <div>Subscriptions</div>
+      </div>
+      <div class="sidebar-link">
+        <img class="sidebar-icons" src="./img/icons/originals.svg">
+        <div>Originals</div>
+      </div>
+      <div class="sidebar-link">
+        <img class="sidebar-icons" src="./img/icons/youtube-music.svg">
+        <div>MeTube Music</div>
+      </div>
+      <div class="sidebar-link">
+        <img class="sidebar-icons" src="./img/icons/library.svg">
+        <div>Library</div>
+      </div>
+    </nav>
+
+
+    <!---VIDEOS GRID PART-->
+    <main>
+      <section class="video-grid">
+
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img class="thumbnail" src="./img/thumbnails/thumbnail-1.webp">
+            <div class="video-time">14:20</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img class = "profile-picture" src="img/profile/channel-1.jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                Talking Tech and AI with Google CEO Sundar Pichai!
+              </p>
+              <p class="video-author">
+                Marques Brownlee
+              </p>
+              <p class="video-stats">
+                3.4M views &#183; 6 months ago
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <div class="video-time">20:15</div>
+            <img class="thumbnail" src="./img/thumbnails/thumbnail-2.webp">
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img class = "profile-picture" src="img/profile/channel-2.jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                Try Not To Laugh Challenge #9
+              </p>
+              <p class="video-author">
+                Markiplier
+              </p>
+              <p class="video-stats">
+                19M views &#183; 4 years ago
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <div class="video-time">2:14:36</div>
+            <img class="thumbnail" src="./img/thumbnails/thumbnail-3.jpg">
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img class = "profile-picture" src="img/profile/channel-3.jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                The 2nd Annual Trash Taste Awards | Trash Taste #100
+              </p>
+              <p class="video-author">
+                Trash Taste
+              </p>
+              <p class="video-stats">
+                2.4M views &#183; 3 months ago
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <div class="video-time">25:50</div>
+            <img class="thumbnail" src="./img/thumbnails/thumbnail-4.jpg">
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img class = "profile-picture" src="img/profile/channel-4.jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                How Does Living in Japan Change You?
+              </p>
+              <p class="video-author">
+                Abroad in Japan
+              </p>
+              <p class="video-stats">
+                1.2M views &#183; 2 years ago
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <div class="video-time">4:20</div>
+            <img class="thumbnail" src="./img/thumbnails/thumbnail-5.jpg">
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img class = "profile-picture" src="img/profile/channel-5.webp">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                New Member to the Family!
+              </p>
+              <p class="video-author">
+                PewDiePie
+              </p>
+              <p class="video-stats">
+                4.3M views &#183; 1 month ago
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <div class="video-time">29:49</div>
+            <img class="thumbnail" src="./img/thumbnails/thumbnail-6.webp">
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img class = "profile-picture" src="img/profile/channel-6.jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                Saiki Kusuo best moments
+              </p>
+              <p class="video-author">
+                SpyMan
+              </p>
+              <p class="video-stats">
+                2M views &#183; 4 years ago
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <img class="thumbnail" src="./img/thumbnails/thumbnail-7.png">
+            <div class="video-time">6:29:19</div>
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img class = "profile-picture" src="img/profile/channel-7.jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                HTML & CSS Full Course - Beginner to Pro (2022)
+              </p>
+              <p class="video-author">
+                SuperSimpleDev
+              </p>
+              <p class="video-stats">
+                690k views &#183; 2 years ago
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <div class="video-time">14:56</div>
+            <img class="thumbnail" src="./img/thumbnails/thumbnail-8.webp">
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img class = "profile-picture" src="img/profile/channel-8.jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                Spring Anime 2022 in a Nutshell
+              </p>
+              <p class="video-author">
+                Gigguk
+              </p>
+              <p class="video-stats">
+                2.4M views &#183; 6 months ago
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <div class="video-time">23:56</div>
+            <img class="thumbnail" src="./img/thumbnails/thumbnail-9.jpg">
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img class = "profile-picture" src="img/profile/channel-9.jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                MY FIRST TIME PLAYING ON THE NEW UPDATE! - Phasmophobia NEW UPDATE
+              </p>
+              <p class="video-author">
+                Insym
+              </p>
+              <p class="video-stats">
+                50.6k views &#183; 3 days ago
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <div class="video-time">0:46</div>
+            <img class="thumbnail" src="./img/thumbnails/thumbnail-10.jpg">
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img class = "profile-picture" src="img/profile/channel-10.jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                It's so sad that Steve Jobs died of Ligma
+              </p>
+              <p class="video-author">
+                Jehtt
+              </p>
+              <p class="video-stats">
+                3.7M views &#183; 1 year ago
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <div class="video-time">5:48</div>
+            <img class="thumbnail" src="./img/thumbnails/thumbnail-11.jpg">
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img class = "profile-picture" src="img/profile/channel-11.jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                Devil May Cry 5 - Subhuman [EPIC METAL COVER] (Little V)
+              </p>
+              <p class="video-author">
+                LittleVMills
+              </p>
+              <p class="video-stats">
+                2.0M views &#183; 4 years ago
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="video-preview">
+          <div class="thumbnail-row">
+            <div class="video-time">19:38</div>
+            <img class="thumbnail" src="./img/thumbnails/thumbnail-12.webp">
+          </div>
+          <div class="video-info-grid">
+            <div class="channel-picture">
+              <img class = "profile-picture" src="img/profile/channel-12.jpg">
+            </div>
+            <div class="video-info">
+              <p class="video-title">
+                Something About Smash Bros WORLD OF LIGHT ANIMATED (Loud Sound Warning)
+              </p>
+              <p class="video-author">
+                TerminalMontage
+              </p>
+              <p class="video-stats">
+                45.7M views &#183; 2 year ago
+              </p>
+            </div>
+          </div>
+        </div>
+  
+      </section>
+    </main>
+
+
+  </body>
+</html>

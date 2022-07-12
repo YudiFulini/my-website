@@ -1,35 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "0d1c34c1f6a54856f102",
-    "url": "/mypage/static/css/main.974eaebc.chunk.css"
+    "revision": "9692fbde0c27b7572abc",
+    "url": "/mypage/static/css/main.6913548a.chunk.css"
   },
   {
-    "revision": "0d1c34c1f6a54856f102",
-    "url": "/mypage/static/js/main.4745dd63.chunk.js"
+    "revision": "9692fbde0c27b7572abc",
+    "url": "/mypage/static/js/main.b96c8b27.chunk.js"
   },
   {
     "revision": "1d0eb0fb2dd27e69d724",
     "url": "/mypage/static/js/runtime~main.4c2b4ee8.js"
   },
   {
-    "revision": "760b254c9e716e45eead",
-    "url": "/mypage/static/js/2.7a848a05.chunk.js"
-  },
-  {
-    "revision": "bf06e3bfde43810540ba219f38749fd6",
-    "url": "/mypage/static/media/page-icon.bf06e3bf.png"
-  },
-  {
-    "revision": "3dd527b675131beb757a745a57aa4817",
-    "url": "/mypage/static/media/books-icon.3dd527b6.png"
-  },
-  {
-    "revision": "c9ac9c1a4b7b76db5e8a3764c869a782",
-    "url": "/mypage/static/media/profile-icon.c9ac9c1a.png"
-  },
-  {
-    "revision": "821fa01d971ed933d64b6412f80ae1de",
-    "url": "/mypage/static/media/software-development.821fa01d.png"
+    "revision": "03176e2fa273dda71e07",
+    "url": "/mypage/static/js/2.94abba90.chunk.js"
   },
   {
     "revision": "2b7a1a064d4598e17b601d169c5bd092",
@@ -88,7 +72,23 @@ self.__precacheManifest = [
     "url": "/mypage/static/media/travel-img.26330e02.jpeg"
   },
   {
-    "revision": "c9a398329bb904544bdbea32b963e2fc",
+    "revision": "bf06e3bfde43810540ba219f38749fd6",
+    "url": "/mypage/static/media/page-icon.bf06e3bf.png"
+  },
+  {
+    "revision": "3dd527b675131beb757a745a57aa4817",
+    "url": "/mypage/static/media/books-icon.3dd527b6.png"
+  },
+  {
+    "revision": "c9ac9c1a4b7b76db5e8a3764c869a782",
+    "url": "/mypage/static/media/profile-icon.c9ac9c1a.png"
+  },
+  {
+    "revision": "821fa01d971ed933d64b6412f80ae1de",
+    "url": "/mypage/static/media/software-development.821fa01d.png"
+  },
+  {
+    "revision": "e4d8b98c9ac7203c46dc2b8c784e2866",
     "url": "/mypage/index.html"
   }
 ];

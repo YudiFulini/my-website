@@ -1,25 +1,19 @@
 import React from "react";
 
-
 import AboutMeContainer from './aboutMeContainer';
 import SkillContainer from './skillContainer.jsx';
 import HobbiesContainer from './hobbiesContainer.jsx';
 
-
-
-
-
-const pageContent = () => {
+const homePage = () => {
   return (
-    <>
-    <AboutMeContainer/>
+    <div id="home">
+      <AboutMeContainer/>
 
-    <SkillContainer/>
+      <SkillContainer/>
 
-    <HobbiesContainer/>
-    </>
-
-  );
+      <HobbiesContainer/>
+    </div>
+  )
 }
 
-export default pageContent;
+export default homePage;

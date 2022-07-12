@@ -11,33 +11,89 @@ import ReactIcon from './icons/react-icon.png'
 import BootstraptIcon from './icons/bootstrap-icon.png'
 import ArduinoIcon from './icons/arduino-icon.png'
 import MatlabIcon from './icons/matlab-icon.png'
-
 import BrazilIcon from './icons/brazil-icon.png'
 import USAIcon from './icons/usa-icon.png'
 import JapanIcon from './icons/japan-icon.png'
 
+const skills = [
+  {
+    name:'HTML',
+    level:'',
+    img: HTML5Icon
+  },
+  {
+    name:'CSS',
+    level:'',
+    img: CSS3Icon
+  },
+  {
+    name:'Javascript',
+    level:'',
+    img: JavascriptIcon
+  },
+  {
+    name:'React',
+    level:'',
+    img: ReactIcon
+  },
+  {
+    name:'Bootstrap',
+    level:'',
+    img: BootstraptIcon
+  },
+  {
+    name:'Arduino/',
+    level:'Microcontrollers',
+    img: ArduinoIcon
+  },
+  {
+    name:'Matlab',
+    level:'',
+    img: MatlabIcon
+  },
+]
+
+const languages = [
+  {
+    name:'Portuguese',
+    level:'Native',
+    img: BrazilIcon
+  },
+  {
+    name:'English',
+    level:'Fluent',
+    img: USAIcon
+  },
+  {
+    name:'Japanese',
+    level:'Intermediate',
+    img: JapanIcon
+  },
+]
+
+
 const skillContainer = ()=>{
   return(
     <Container fluid className="py-2 bg-dark">
-      <h2 className="mt-2 text-white text-center">Skills</h2>
+      <h2 className="mt-2 text-white text-center font-8bit-title">Skills</h2>
 
       <Container fluid='lg'>
-        <h5 className="my-3 text-light">Engineering / Programming</h5>
+        <h5 className="my-3 font-8bit-subtitle text-light">Engineering / Programming</h5>
         <Row className="d-flex justify-content-center align-items-center">
-          <SkillItem skillName='HTML' skillImg={HTML5Icon}/>
-          <SkillItem skillName='CSS' skillImg={CSS3Icon}/>
-          <SkillItem skillName='Javascript' skillImg={JavascriptIcon}/>
-          <SkillItem skillName='React' skillImg={ReactIcon}/>
-          <SkillItem skillName='Bootstrap' skillImg={BootstraptIcon}/>
-          <SkillItem skillName={'Arduino/\nMicrocontrollers'} skillImg={ArduinoIcon}/>
-          <SkillItem skillName='Matlab' skillImg={MatlabIcon}/>
+          {
+            skills.map((skill)=>{
+              return(<SkillItem skillName={skill.name} skillLevel={skill.level} skillImg={skill.img}/>)
+            })
+          }
         </Row>
 
-        <h5 className="my-3 text-light text-">Languages</h5>
-        <Row className="d-flex justify-content-center align-items-center">
-          <SkillItem skillName='Portuguese: Native' skillImg={BrazilIcon}/>
-          <SkillItem skillName='English: Fluent' skillImg={USAIcon}/>
-          <SkillItem skillName='Japanese: Intermediate' skillImg={JapanIcon}/>
+        <h5 className="my-3 font-8bit-subtitle text-light text-">Languages</h5>
+        <Row className="d-flex mb-3 justify-content-center align-items-center">
+          {
+            languages.map((language)=>{
+              return(<SkillItem skillName={language.name + ':'} skillLevel={language.level} skillImg={language.img}/>)
+            })
+          }
         </Row>
       </Container>
 

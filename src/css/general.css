@@ -1,13 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+
 *{
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
 
   font-family:Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
-.fitting-img{
-  height: 100%;
+body{
+  padding-top: 60px;
+}
+
+.hobbie-img{
+  height: 80%;
   width: 100%;
   object-fit: cover;
+  border-radius: 5px;
+}
+@media(min-width: 1400px){
+  .hobbie-img{
+    height: 300px;
+  }
+}
+
+
+.font-8bit-title{
+  font-family: 'Press Start 2P' ,'VT323', Arial;
+  font-size: 18px;
+}
+.font-8bit-navbar{
+  font-family: 'Press Start 2P', Arial;
+  font-size: 20px;
+}
+.font-8bit-subtitle{
+  font-family: 'VT323', Arial;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.font-8bit-timeline{
+  font-family: 'VT323', Arial;
+  font-size: 24px;
+  font-weight: 400;
+}
+.font-8bit-navitem{
+  font-family: 'VT323', Arial;
+  font-size: 12px;
+  font-weight: 400;
 }

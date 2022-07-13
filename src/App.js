@@ -16,16 +16,16 @@ const App = () => {
     <>
       <NavigationBar/>
 
-      <Router>
-          <Routes>
-            <Route path="/" element={<HomePage/>}/>
-            <Route path="/home" element={<HomePage/>}/>
-            <Route path="/projects" element={<ProjectsPage/>}/>
-            <Route path="/studies" element={<PageStudies/>}/>
 
-            <Route path='*' element={<ErrorPage/>}></Route>
-          </Routes>
-      </Router>
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/home" element={<HomePage/>}/>
+        <Route path="/projects" element={<ProjectsPage/>}/>
+        <Route path="/studies" element={<PageStudies/>}/>
+
+        <Route path='*' element={<ErrorPage/>}></Route>
+      </Routes>
+
     </>
   );
 }

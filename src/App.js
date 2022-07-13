@@ -9,7 +9,7 @@ import ErrorPage from './containers/pageError'
 import NavigationBar from './containers/narbar';
 import Footer from './containers/footer';
 
-import {BrowserRouter as Router, Routes , Route} from 'react-router-dom'
+import {HashRouter as Router, Routes , Route} from 'react-router-dom'
 
 const App = () => {
   return (

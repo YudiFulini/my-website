@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "822116c3f52c41896cd8",
+    "revision": "374bfe52018323b89bd4",
     "url": "/mypage/static/css/main.6913548a.chunk.css"
   },
   {
-    "revision": "822116c3f52c41896cd8",
-    "url": "/mypage/static/js/main.ba2464fa.chunk.js"
+    "revision": "374bfe52018323b89bd4",
+    "url": "/mypage/static/js/main.452b5f7c.chunk.js"
   },
   {
     "revision": "1d0eb0fb2dd27e69d724",
     "url": "/mypage/static/js/runtime~main.4c2b4ee8.js"
   },
   {
-    "revision": "b8fa68e0f9e40f571f50",
-    "url": "/mypage/static/js/2.e6a78afc.chunk.js"
+    "revision": "51f3d91853cb2157a169",
+    "url": "/mypage/static/js/2.e76bc180.chunk.js"
   },
   {
     "revision": "2b7a1a064d4598e17b601d169c5bd092",
@@ -84,11 +84,15 @@ self.__precacheManifest = [
     "url": "/mypage/static/media/profile-icon.c9ac9c1a.png"
   },
   {
+    "revision": "d4650e068fc5a9810fa9b076d789473e",
+    "url": "/mypage/static/media/globe-icon.d4650e06.png"
+  },
+  {
     "revision": "821fa01d971ed933d64b6412f80ae1de",
     "url": "/mypage/static/media/software-development.821fa01d.png"
   },
   {
-    "revision": "5047b66e95cba664047fdeb262d17c8f",
+    "revision": "f58406ea3399c4d53dd1f067b7e59baf",
     "url": "/mypage/index.html"
   }
 ];

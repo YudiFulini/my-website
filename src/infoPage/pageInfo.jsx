@@ -14,12 +14,12 @@ const madeUsing = [
 ]
 
 const iconsAttributions =
-  `I didn't make the icons used to build this page. All the rights are reserved to the following:`;
+  `I didn't make the icons used in this page. All rights are reserved to the following:`;
 
 
 const pageInfo = () => {
   return (
-    <Container className = "container-md" id="info">
+    <Container fluid="md" id="info">
       <h2 className="py-4 px-2 m-0 text-white font-8bit-title">About This Page</h2>
       <p className="px-2 m-0 text-white">{aboutThisPage}</p>
 
@@ -33,7 +33,10 @@ const pageInfo = () => {
       <h2 className="pt-5 px-2 m-0 text-white font-8bit-title">Attributions </h2>
       <h4 className="d-inline-flex ps-2 m-0 text-white font-8bit-subtitle">- Icons: </h4>
       <p className="d-inline-flex ps-2 m-0 text-white">{iconsAttributions}</p>
-      <a className="d-block my-0 mx-3 font-8bit-subtitle" href="https://www.flaticon.com/" title="FlatIcons">Flaticon</a>
+      <div>
+        <a className="my-0 mx-3 font-8bit-subtitle" href="https://www.flaticon.com/" title="FlatIcons">Flaticon</a>
+      </div>
+      
       
     </Container>
   )

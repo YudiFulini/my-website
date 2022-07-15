@@ -6,6 +6,7 @@ import HomePage from './homePage/pageHome';
 import ProjectsPage from './projects/pageProjects';
 import ErrorPage from './components/pageError';
 import InfoPage from './infoPage/pageInfo';
+import Kanjipage from './projects/kanjiPractice/kanjiPage'
 
 import NavigationBar from './components/navbar.jsx';
 import Footer from './components/footer';
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/home" element={<HomePage/>}/>
         <Route path="/projects" element={<ProjectsPage/>}/>
         <Route path='/info' element={<InfoPage/>}/>
+        <Route path='/projects/kanjiPractice' element={<Kanjipage/>}/>
 
         <Route path='*' element={<ErrorPage/>}></Route>
       </Routes>

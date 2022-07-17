@@ -36,7 +36,11 @@ const pageInfo = () => {
       <div>
         <a className="my-0 mx-3 font-8bit-subtitle" href="https://www.flaticon.com/" title="FlatIcons">Flaticon</a>
       </div>
-      
+
+      <h4 className="d-inline-flex ps-2 m-0 text-white font-8bit-subtitle">- APIs: </h4>
+      <div>
+        <a className="my-0 mx-3 font-8bit-subtitle" href="" title=""></a>
+      </div>
       
     </Container>
   )

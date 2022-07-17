@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import {Link} from 'react-router-dom'
 
 import KanjiIcon from './icon/kanji-icon.png';
+import ProjectComponent from './componentProject.jsx';
 
 const projects = [
   {
@@ -17,60 +18,33 @@ const projects = [
     icon: KanjiIcon,
     link: `/projects/kanjiPractice`
   }
-]
+];
 
-const linkStyle = {
-  textDecoration: "none",
-  color: 'rgba(250, 250, 250, 0.8)'
-};
+const practiceProjects = [
+
+];
+
+
 
 const pageProjects = () => {
   return (
-    <Container fluid="md" id="projects">
+    <Container id="projects">
       <h2 className="py-4 px-2 m-0 text-white font-8bit-title">Projects</h2>
-      <Row className="mb-5 border-bottom border-top border-2 border-light d-flex">
+      <Row className="p-0 mx-0 my-2 border-bottom border-top border-2 border-light d-flex justify-content-center">
         {projects.map((project)=>{
           return(
-            <Col className="md-6 m-3 d-flex justify-content-center">
-              <Card style={{ width: '250px' }}>
-                <Card.Img variant="top" src={project.icon} />
-                <Card.Body>
-                  <Card.Title class="font-8bit-subtitle">{project.title}</Card.Title>
-                  <Card.Text>
-                    {project.description}
-                  </Card.Text>
-                  <Button variant="dark">
-                    <Link to={project.link} style={linkStyle}>
-                      Check Project
-                    </Link>
-                  </Button>
-                </Card.Body>
-              </Card>
-            </Col>
+            <ProjectComponent title={project.title} description={project.description}
+            icon={project.icon} link={project.link}/>
           )
         })}
       </Row>
       
       <h2 className="py-4 px-2 m-0 text-white font-8bit-title">Practice Projects</h2>
-      <Row className="mb-5 border-bottom border-top border-2 border-light d-flex">
-        {projects.map((project)=>{
+      <Row className="p-0 mx-0 my-2 border-bottom border-top border-2 border-light d-flex justify-content-center">
+        {practiceProjects.map((project)=>{
           return(
-            <Col className="md-6 m-3 d-flex justify-content-center">
-              <Card style={{ width: '250px' }}>
-                <Card.Img variant="top" src={project.icon} />
-                <Card.Body>
-                  <Card.Title class="font-8bit-subtitle">{project.title}</Card.Title>
-                  <Card.Text>
-                    {project.description}
-                  </Card.Text>
-                  <Button variant="dark">
-                    <Link to={project.link} style={linkStyle}>
-                      Check Project
-                    </Link>
-                  </Button>
-                </Card.Body>
-              </Card>
-            </Col>
+            <ProjectComponent title={project.title} description={project.description}
+            icon={project.icon} link={project.link}/>
           )
         })}
       </Row>

@@ -13,7 +13,7 @@ const componentProject = (props)=>{
   const {title, description, icon, link} = props
 
   return(
-    <Col xxl={5} xl={7} lg={9} md={11} sm={8} xs={9} xxs={12} className='m-5 p-0 '>
+    <Col xxl={6} xl={7} lg={8} md={11} sm={8} xs={9} xxs={12} className='mx-0 my-4 p-2 '>
       <Row>
         <Col md={6} className="d-flex justify-content-md-between justify-content-center align-items-center">
           <img src={icon} class="img-thumbnail float-start" />

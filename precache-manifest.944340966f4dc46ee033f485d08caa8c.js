@@ -1,19 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "4d5bb7168a535afc3801",
+    "revision": "9ff1aadbf3282d86d6bd",
     "url": "/mypage/static/css/main.6913548a.chunk.css"
   },
   {
-    "revision": "4d5bb7168a535afc3801",
-    "url": "/mypage/static/js/main.9dcfff2b.chunk.js"
+    "revision": "9ff1aadbf3282d86d6bd",
+    "url": "/mypage/static/js/main.f649d0eb.chunk.js"
   },
   {
     "revision": "1d0eb0fb2dd27e69d724",
     "url": "/mypage/static/js/runtime~main.4c2b4ee8.js"
   },
   {
-    "revision": "7ec37ae32cfb2d300cf6",
-    "url": "/mypage/static/js/2.59f29dbc.chunk.js"
+    "revision": "aef2e07c151f54b4b91e",
+    "url": "/mypage/static/js/2.6e750816.chunk.js"
+  },
+  {
+    "revision": "2d14d1b801fcc486f211edbbda45e64e",
+    "url": "/mypage/static/media/kanji-icon.2d14d1b8.png"
   },
   {
     "revision": "2b7a1a064d4598e17b601d169c5bd092",
@@ -72,10 +76,6 @@ self.__precacheManifest = [
     "url": "/mypage/static/media/travel-img.26330e02.jpeg"
   },
   {
-    "revision": "2d14d1b801fcc486f211edbbda45e64e",
-    "url": "/mypage/static/media/kanji-icon.2d14d1b8.png"
-  },
-  {
     "revision": "bf06e3bfde43810540ba219f38749fd6",
     "url": "/mypage/static/media/page-icon.bf06e3bf.png"
   },
@@ -96,7 +96,7 @@ self.__precacheManifest = [
     "url": "/mypage/static/media/software-development.821fa01d.png"
   },
   {
-    "revision": "148ead043a4db3ea3fed0774b87d4e2e",
+    "revision": "33ec4d08fa56810873bb37b1d59155c2",
     "url": "/mypage/index.html"
   }
 ];

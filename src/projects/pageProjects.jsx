@@ -17,14 +17,6 @@ const projects = [
     practice writing by hiding the Kanji and write the letter accordingly to the furigana.`,
     icon: KanjiIcon,
     link: `/projects/kanjiPractice`
-  },
-  {
-    title: `Kanji Practice`,
-    description: `In this project you can practice Japanese Kanji. Select the scholar year you would like 
-    to study and hide/show english subtitles or furigana to practice reading. You can also 
-    practice writing by hiding the Kanji and write the letter accordingly to the furigana.`,
-    icon: KanjiIcon,
-    link: `/projects/kanjiPractice`
   }
 ];
 

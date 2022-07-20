@@ -37,9 +37,10 @@ const pageInfo = () => {
         <a className="my-0 mx-3 font-8bit-subtitle" href="https://www.flaticon.com/" title="FlatIcons">Flaticon</a>
       </div>
 
-      <h4 className="d-inline-flex ps-2 m-0 text-white font-8bit-subtitle">- APIs: </h4>
+      <h4 className="ps-2 m-0 text-white font-8bit-subtitle">- APIs: </h4>
       <div>
-        <a className="my-0 mx-3 font-8bit-subtitle" href="" title=""></a>
+        <p className="px-3 mt-3 mb-0 text-white">Used the following API for the Kanji Practice Project</p>
+        <a className="my-0 mx-3 font-8bit-subtitle" href="https://app.kanjialive.com/api/docs" title="">Kanji Alive API</a>
       </div>
       
     </Container>

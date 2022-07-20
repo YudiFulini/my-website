@@ -1,4 +1,5 @@
 import React from 'react';
+import './css/kanjiProject.css';
 import './css/general.css';
 import './css/main.min.css'
 

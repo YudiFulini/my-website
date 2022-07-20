@@ -14,16 +14,19 @@ import {Link} from 'react-router-dom'
 
 const navLinks = [
   {
+    id:1,
     linkTitle: 'About me',
     linkIcon: ProfileIcon,
     linkTo: '/'
   },
   {
+    id:2,
     linkTitle: 'Projects',
     linkIcon: BookIcon,
     linkTo: '/projects'
   },
   {
+    id:3,
     linkTitle: 'Information',
     linkIcon: GlobeIcon,
     linkTo: '/info'
@@ -56,7 +59,7 @@ const navbar = ()=>{
               {
                 navLinks.map((link)=>{
                   return(
-                    <Nav.Link>
+                    <Nav.Link key={link.id}>
                       <Link to={link.linkTo} className="d-flex justify-content-end" style={linkStyle}>
                         {link.linkTitle}
                         <img src={link.linkIcon} width="23" height="23" className="mx-1 d-inline-block align-top"/>

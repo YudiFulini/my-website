@@ -10,7 +10,7 @@ const linkStyle = {
 };
 
 const componentProject = (props)=>{
-  const {title, description, icon, link} = props
+  const {title, description, icon, link, id} = props
 
   return(
     <Col xxl={6} xl={7} lg={8} md={11} sm={8} xs={9} xxs={12} className='mx-0 my-4 p-2 '>

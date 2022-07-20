@@ -11,6 +11,7 @@ import ProjectComponent from './componentProject.jsx';
 
 const projects = [
   {
+    id:1,
     title: `Kanji Practice`,
     description: `In this project you can practice Japanese Kanji. Select the scholar year you would like 
     to study and hide/show english subtitles or furigana to practice reading. You can also 
@@ -33,7 +34,7 @@ const pageProjects = () => {
       <Row className="p-0 mx-0 my-2 border-bottom border-top border-2 border-light d-flex justify-content-center">
         {projects.map((project)=>{
           return(
-            <ProjectComponent title={project.title} description={project.description}
+            <ProjectComponent key={project.id} title={project.title} description={project.description}
             icon={project.icon} link={project.link}/>
           )
         })}
@@ -43,7 +44,7 @@ const pageProjects = () => {
       <Row className="p-0 mx-0 my-2 border-bottom border-top border-2 border-light d-flex justify-content-center">
         {practiceProjects.map((project)=>{
           return(
-            <ProjectComponent title={project.title} description={project.description}
+            <ProjectComponent key={project.id} title={project.title} description={project.description}
             icon={project.icon} link={project.link}/>
           )
         })}

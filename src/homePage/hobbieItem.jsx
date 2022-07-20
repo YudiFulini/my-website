@@ -7,7 +7,7 @@ const hobbieItem=(props)=>{
   const {hobbieTitle, hobbieDescription, hobbiePhoto} = props;
 
   return (
-    <Row className="py-4 mx-0 d-flex align-items-center justify-content-center border-top border-bottom border-dark">
+    <Row key='hobbieTitle' className="py-4 mx-0 d-flex align-items-center justify-content-center border-top border-bottom border-dark">
       <Col xl={4} lg={5} md={6}>
         <img src={hobbiePhoto} className="img-fluid rounded"/>
       </Col>

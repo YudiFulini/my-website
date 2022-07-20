@@ -26,7 +26,7 @@ const pageInfo = () => {
       <h2 className="py-4 px-2 m-0 text-white font-8bit-title">Made using</h2>
       {
         madeUsing.map((tool) => {
-          return(<p className="px-2 m-0 text-white">{"- " + tool}</p>)
+          return(<p key={tool} className="px-2 m-0 text-white">{"- " + tool}</p>)
         })
       }
 

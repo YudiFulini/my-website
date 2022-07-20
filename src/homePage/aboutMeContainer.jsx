@@ -48,7 +48,7 @@ const aboutMeContainer= ()=>{
             return (
               <>
               <h6 className="text-white my-0 p-0 font-8bit-timeline">&#9658; {timeline.year} </h6>
-              <p key={i} className="text-white px-5 mt-2 mb-4">{timeline.description}</p>
+              <p className="text-white px-5 mt-2 mb-4">{timeline.description}</p>
               </>
               
             )

@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/Container';
 import KanjiComponent from './kanjiComponent.jsx';
 import Dropdown from 'react-bootstrap/Dropdown';
 
-
 const optionsKanjiList = {
 	method: 'GET',
 	headers: {
@@ -12,20 +11,39 @@ const optionsKanjiList = {
 	}
 };
 
-
 const kanjiPage = () => {
   const kanjisElementary = [];
   const [kanjiList, setKanjiList] = useState([]);
-  const [grade, setGrade] = useState(0);
+  const [grade, setGrade] = useState(1);
+  const [displayList, setDisplayList] = useState({
+    kanji: 'block',
+    furigana: 'block',
+    english: 'block'
+  });
 
-  const searchKanjis =  () => {
+  const toggleDisplay = (attribute) => {
+    const display = displayList;
+    if(display[attribute] === 'block'){
+      display[attribute] = 'none';
+    }else{
+      display[attribute] = 'block';
+    }
+    console.log(display)
+    setDisplayList({
+      kanji: display.kanji,
+      furigana: display.furigana,
+      english: display.english,
+    })
+  }
+  
+  const searchKanjis = () => {
     fetch('https://kanjialive-api.p.rapidapi.com/api/public/kanji/all', optionsKanjiList)
     .then(response => response.json())
     .then(response => {
+      //clean kanjiElementary array
       if(kanjisElementary.length>0)
         kanjisElementary.splice(0, kanjisElementary.length)
-
-      response.forEach((letter) => kanjisElementary.push(
+        response.forEach((letter) => kanjisElementary.push(
         {
           character: letter.kanji.character,
           onyomi: letter.kanji.onyomi.katakana,
@@ -38,7 +56,6 @@ const kanjiPage = () => {
     }).then(()=>{
       console.log(kanjisElementary);
       setKanjiList(kanjisElementary);
-      console.log(kanjiList);
     })
     .catch(err => console.error(err));
   }
@@ -46,7 +63,6 @@ const kanjiPage = () => {
 
   useEffect(() => {
     searchKanjis();
-    setGrade(1);
   },[]);
 
   return(
@@ -55,12 +71,12 @@ const kanjiPage = () => {
       {kanjiList.length > 0 ? (
           <div className="kanji-components">
             {
-              kanjiList.map((kanji,i) => {
-                if (kanji.grade === grade)
+              kanjiList.filter(kanji => kanji.grade === grade).map((kanji,i)=>{
+                const id = i+1
                 return (
-                  <KanjiComponent key={i} character={kanji.character} onyomi={kanji.onyomi}
+                  <KanjiComponent key={i} id={kanji.grade+'.'+id} character={kanji.character} onyomi={kanji.onyomi}
                     kunyomi={kanji.kunyomi} meaning={kanji.meaning} grade={kanji.grades} 
-                    examples={kanji=kanji.examples}/>
+                    examples={kanji=kanji.examples} display={displayList}/>
                 )
               })
             }
@@ -72,24 +88,41 @@ const kanjiPage = () => {
         )
       }
     </Container>
-    <div className="fixed-bottom d-flex justify-content-center py-2 bg-dark text-lightground align-items-center">
-    <Dropdown className="px-3">
-      <Dropdown.Toggle variant="success" id="dropdown-basic">
-        Select Grade
-      </Dropdown.Toggle>
 
-      <Dropdown.Menu>
-        <Dropdown.Item as="button" onClick={()=>setGrade(1)}>Grade 1</Dropdown.Item>
-        <Dropdown.Item as="button" onClick={()=>setGrade(2)}>Grade 2</Dropdown.Item>
-        <Dropdown.Item as="button" onClick={()=>setGrade(3)}>Grade 3</Dropdown.Item>
-        <Dropdown.Item as="button" onClick={()=>setGrade(4)}>Grade 4</Dropdown.Item>
-        <Dropdown.Item as="button" onClick={()=>setGrade(5)}>Grade 5</Dropdown.Item>
-        <Dropdown.Item as="button" onClick={()=>setGrade(6)}>Grade 6</Dropdown.Item>
-        
-      </Dropdown.Menu>
-    </Dropdown>
-      Grade {grade} Kanji
-    </div>
+
+    <footer className="fixed-bottom d-flex justify-content-around py-2 bg-dark text-lightground align-items-center">
+      <Dropdown className="px-3">
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          Grade
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item as="button" onClick={()=>setGrade(1)}>Grade 1</Dropdown.Item>
+          <Dropdown.Item as="button" onClick={()=>setGrade(2)}>Grade 2</Dropdown.Item>
+          <Dropdown.Item as="button" onClick={()=>setGrade(3)}>Grade 3</Dropdown.Item>
+          <Dropdown.Item as="button" onClick={()=>setGrade(4)}>Grade 4</Dropdown.Item>
+          <Dropdown.Item as="button" onClick={()=>setGrade(5)}>Grade 5</Dropdown.Item>
+          <Dropdown.Item as="button" onClick={()=>setGrade(6)}>Grade 6</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+
+      <span>
+        Grade {grade}
+      </span>
+
+      <Dropdown className="px-3">
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          Display
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item as="button" onClick={()=>toggleDisplay('kanji')}
+          >Kanji</Dropdown.Item>
+          <Dropdown.Item as="button" onClick={()=>toggleDisplay('furigana')}
+          >Furigana</Dropdown.Item>
+          <Dropdown.Item as="button" onClick={()=>toggleDisplay('english')}
+          >English</Dropdown.Item>  
+        </Dropdown.Menu>
+      </Dropdown>
+    </footer>
   </>
     
     

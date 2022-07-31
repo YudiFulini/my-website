@@ -90,7 +90,7 @@ const kanjiPage = () => {
     </Container>
 
 
-    <footer className="fixed-bottom d-flex justify-content-around py-2 bg-dark text-lightground align-items-center">
+    <footer className="fixed-bottom d-flex justify-content-around py-2 bg-dark align-items-center">
       <Dropdown className="px-3">
         <Dropdown.Toggle variant="success" id="dropdown-basic">
           Grade
@@ -105,7 +105,7 @@ const kanjiPage = () => {
         </Dropdown.Menu>
       </Dropdown>
 
-      <span>
+      <span className="text-lightground">
         Grade {grade}
       </span>
 

@@ -1,5 +1,5 @@
 // custom variable values
-$primary: #689C97;
+$primary: rgb(0, 124, 112);
 $light:  #c3f8e0;
 $dark: #00251f;
 
@@ -21,6 +21,7 @@ $dark:          $gray-900 !default;
 
 // custom theme colours
 $custom-theme-colors: (
+  "primaryOpaque" : rgb(0, 124, 112, 0.5),
   "blackground": #0e0200,
   "lightground": #e7cabc
 );

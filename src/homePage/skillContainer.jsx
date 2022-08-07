@@ -14,6 +14,7 @@ import MatlabIcon from './icons/matlab-icon.png'
 import BrazilIcon from './icons/brazil-icon.png'
 import USAIcon from './icons/usa-icon.png'
 import JapanIcon from './icons/japan-icon.png'
+import PythonIcon from './icons/python-icon.png'
 
 const skills = [
   {
@@ -40,6 +41,11 @@ const skills = [
     name:'Bootstrap',
     level:'',
     img: BootstraptIcon
+  },
+  {
+    name:'Python',
+    level:'',
+    img: PythonIcon
   },
   {
     name:'Arduino/',

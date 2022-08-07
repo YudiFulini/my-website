@@ -12,6 +12,7 @@ const optionsKanjiList = {
 };
 
 const kanjiPage = () => {
+  
   const kanjisElementary = [];
   const [kanjiList, setKanjiList] = useState([]);
   const [grade, setGrade] = useState(1);
@@ -82,8 +83,8 @@ const kanjiPage = () => {
             }
           </div>
         ) : (
-          <div className="empty">
-            <h2 className="text-white p-3">loading...</h2>
+          <div className="py-3 my-3">
+            <h2 className="font-8bit-title text-center text-white p-3">loading...</h2>
           </div>
         )
       }

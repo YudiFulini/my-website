@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "9ba50219ef7ae679a9bb",
+    "revision": "a4611d20bc23c94200f3",
     "url": "/mypage/static/css/main.b7f01978.chunk.css"
   },
   {
-    "revision": "9ba50219ef7ae679a9bb",
-    "url": "/mypage/static/js/main.7d2569f0.chunk.js"
+    "revision": "a4611d20bc23c94200f3",
+    "url": "/mypage/static/js/main.ff09449b.chunk.js"
   },
   {
     "revision": "1d0eb0fb2dd27e69d724",
     "url": "/mypage/static/js/runtime~main.4c2b4ee8.js"
   },
   {
-    "revision": "be40f710d40b68ac2cd9",
-    "url": "/mypage/static/js/2.5bb724bf.chunk.js"
+    "revision": "a8d5abfbbe0b266687ea",
+    "url": "/mypage/static/js/2.316f9d7e.chunk.js"
   },
   {
     "revision": "2b7a1a064d4598e17b601d169c5bd092",
@@ -50,6 +50,10 @@ self.__precacheManifest = [
   {
     "revision": "2822f08635ba028c6928d633a4416951",
     "url": "/mypage/static/media/usa-icon.2822f086.png"
+  },
+  {
+    "revision": "4d1bf7683aa0f8aed16f8eb318592c49",
+    "url": "/mypage/static/media/python-icon.4d1bf768.png"
   },
   {
     "revision": "abfcc8e287fc4a55d1db32ab3b78a8db",
@@ -96,7 +100,7 @@ self.__precacheManifest = [
     "url": "/mypage/static/media/software-development.821fa01d.png"
   },
   {
-    "revision": "da7d75d6991ba3ace8463e4d12babd06",
+    "revision": "3356fbb5b9c0df15432ccb5ce0ebd9d4",
     "url": "/mypage/index.html"
   }
 ];

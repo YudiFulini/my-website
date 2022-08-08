@@ -2,18 +2,10 @@ import React, { useState, useEffect } from "react";
 import Container from 'react-bootstrap/Container';
 import KanjiComponent from './kanjiComponent.jsx';
 import Dropdown from 'react-bootstrap/Dropdown';
-
-const optionsKanjiList = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '242ab8eed2msh0adce211ac683fep1368a9jsne38135a9bd8a',
-		'X-RapidAPI-Host': 'kanjialive-api.p.rapidapi.com'
-	}
-};
+import {getKanjiList, options} from './getKanjiList';
 
 const kanjiPage = () => {
-  
-  const kanjisElementary = [];
+
   const [kanjiList, setKanjiList] = useState([]);
   const [grade, setGrade] = useState(1);
   const [displayList, setDisplayList] = useState({
@@ -21,49 +13,38 @@ const kanjiPage = () => {
     furigana: 'block',
     english: 'block'
   });
+  const [hideShow, setHideShow] = useState({
+    kanji: 'Hide',
+    furigana: 'Hide',
+    english: 'Hide'
+  })
 
   const toggleDisplay = (attribute) => {
     const display = displayList;
+    const displayHideShow = hideShow;
+
     if(display[attribute] === 'block'){
       display[attribute] = 'none';
+      displayHideShow[attribute] = 'Show'
     }else{
       display[attribute] = 'block';
+      displayHideShow[attribute] = 'Hide'
     }
-    console.log(display)
+
     setDisplayList({
       kanji: display.kanji,
       furigana: display.furigana,
       english: display.english,
     })
-  }
-  
-  const searchKanjis = () => {
-    fetch('https://kanjialive-api.p.rapidapi.com/api/public/kanji/all', optionsKanjiList)
-    .then(response => response.json())
-    .then(response => {
-      //clean kanjiElementary array
-      if(kanjisElementary.length>0)
-        kanjisElementary.splice(0, kanjisElementary.length)
-        response.forEach((letter) => kanjisElementary.push(
-        {
-          character: letter.kanji.character,
-          onyomi: letter.kanji.onyomi.katakana,
-          kunyomi: letter.kanji.kunyomi.hiragana,
-          meaning: letter.kanji.meaning.english,
-          grade: letter.references.grade,
-          examples: letter.examples
-        }
-      ))
-    }).then(()=>{
-      console.log(kanjisElementary);
-      setKanjiList(kanjisElementary);
+    setHideShow({
+      kanji: displayHideShow.kanji,
+      furigana: displayHideShow.furigana,
+      english: displayHideShow.english,
     })
-    .catch(err => console.error(err));
   }
-
 
   useEffect(() => {
-    searchKanjis();
+    getKanjiList(options).then((response)=>{setKanjiList(response)}).catch(()=>{alert('Unexpected error. Please, try again')});
   },[]);
 
   return(
@@ -115,18 +96,19 @@ const kanjiPage = () => {
           Display
         </Dropdown.Toggle>
         <Dropdown.Menu>
-          <Dropdown.Item as="button" onClick={()=>toggleDisplay('kanji')}
-          >Kanji</Dropdown.Item>
-          <Dropdown.Item as="button" onClick={()=>toggleDisplay('furigana')}
-          >Furigana</Dropdown.Item>
-          <Dropdown.Item as="button" onClick={()=>toggleDisplay('english')}
-          >English</Dropdown.Item>  
+          <Dropdown.Item as="button" onClick={()=>toggleDisplay('kanji')}>
+            {hideShow.kanji + ' Kanji'}
+          </Dropdown.Item>
+          <Dropdown.Item as="button" onClick={()=>toggleDisplay('furigana')}>
+            {hideShow.furigana + ' Furigana'}
+          </Dropdown.Item>
+          <Dropdown.Item as="button" onClick={()=>toggleDisplay('english')}>
+            {hideShow.english + ' English'}
+          </Dropdown.Item>  
         </Dropdown.Menu>
       </Dropdown>
     </footer>
   </>
-    
-    
   )
 }
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Container from 'react-bootstrap/Container';
 import KanjiComponent from './kanjiComponent.jsx';
 import Dropdown from 'react-bootstrap/Dropdown';
-import {getKanjiList, options} from './getKanjiList';
+import {getKanjiList} from './getKanjiList';
 
 const kanjiPage = () => {
 
@@ -11,40 +11,25 @@ const kanjiPage = () => {
   const [displayList, setDisplayList] = useState({
     kanji: 'block',
     furigana: 'block',
-    english: 'block'
+    english: 'block',
+    showHide: {kanji: 'Hide', furigana: 'Hide', english: 'Hide'}
   });
-  const [hideShow, setHideShow] = useState({
-    kanji: 'Hide',
-    furigana: 'Hide',
-    english: 'Hide'
-  })
 
   const toggleDisplay = (attribute) => {
     const display = displayList;
-    const displayHideShow = hideShow;
 
     if(display[attribute] === 'block'){
       display[attribute] = 'none';
-      displayHideShow[attribute] = 'Show'
+      display.showHide[attribute] = 'Show'
     }else{
       display[attribute] = 'block';
-      displayHideShow[attribute] = 'Hide'
+      display.showHide[attribute] = 'Hide'
     }
-
-    setDisplayList({
-      kanji: display.kanji,
-      furigana: display.furigana,
-      english: display.english,
-    })
-    setHideShow({
-      kanji: displayHideShow.kanji,
-      furigana: displayHideShow.furigana,
-      english: displayHideShow.english,
-    })
+    setDisplayList((prev)=>{ return{...prev, display}})
   }
 
   useEffect(() => {
-    getKanjiList(options).then((response)=>{setKanjiList(response)}).catch(()=>{alert('Unexpected error. Please, try again')});
+    getKanjiList().then((response)=>{setKanjiList(response)}).catch(()=>{alert('Unexpected error. Please, try again')});
   },[]);
 
   return(
@@ -97,13 +82,13 @@ const kanjiPage = () => {
         </Dropdown.Toggle>
         <Dropdown.Menu>
           <Dropdown.Item as="button" onClick={()=>toggleDisplay('kanji')}>
-            {hideShow.kanji + ' Kanji'}
+            {displayList.showHide.kanji + ' Kanji'}
           </Dropdown.Item>
           <Dropdown.Item as="button" onClick={()=>toggleDisplay('furigana')}>
-            {hideShow.furigana + ' Furigana'}
+            {displayList.showHide.furigana + ' Furigana'}
           </Dropdown.Item>
           <Dropdown.Item as="button" onClick={()=>toggleDisplay('english')}>
-            {hideShow.english + ' English'}
+            {displayList.showHide.english + ' English'}
           </Dropdown.Item>  
         </Dropdown.Menu>
       </Dropdown>

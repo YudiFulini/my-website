@@ -6,13 +6,13 @@ const options = {
   }
 };
 
-const getKanjiList = (options) => {
-
-  const kanjis = [];
+const getKanjiList = () => {
 
   const getKanjiApi = fetch('https://kanjialive-api.p.rapidapi.com/api/public/kanji/all', options)
   .then(response => response.json())
   .then(response => {
+    const kanjis = [];
+
     //clean kanjiElementary array
     if(kanjis.length>0)
       kanjis.splice(0, kanjis.length)
@@ -34,4 +34,4 @@ const getKanjiList = (options) => {
   return getKanjiApi
 }
 
-export {getKanjiList, options};
+export {getKanjiList};

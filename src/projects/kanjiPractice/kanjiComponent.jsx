@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 
 
 const kanjiComponent = (props)=>{
-  let {id, character, onyomi, kunyomi, meaning, grade, examples, display} = props;
+  let {id, character, onyomi, kunyomi, meaning, jlpt, examples, display} = props;
   
   let showKanji = true;
   if(display.kanji == 'none'){
@@ -16,12 +16,12 @@ const kanjiComponent = (props)=>{
 
 
   examples = examples.map(example=>{
-    let [kanji,furigana] = example.japanese.split("（", 2);
-    furigana=furigana.replace('）','')
+    //let [kanji,furigana] = example.japanese.split("（", 2);
+    //furigana=furigana.replace('）','')
     return{
-      japanese: kanji,
-      furigana: furigana,
-      meaning: example.meaning.english
+      japanese: example.word,
+      furigana: example.furigana,
+      meaning: example.meaning
     }
   })
 
@@ -30,13 +30,26 @@ const kanjiComponent = (props)=>{
       <Col className="py-3" md={5}>
         <div className="d-flex flex-row">
           <p className="inline-block text-white m-0 ">Onyomi: </p>
-          <p className="text-white m-0 mx-2" style={{display:display.furigana}}>{onyomi}</p>
+          {
+            onyomi.map((onyomi,i)=>{
+              return(
+                <p className="text-white m-0 mx-1" style={{display:display.furigana}}>{onyomi}</p>
+              )
+            })
+          }
         </div>
 
         <div className="d-flex flex-row">
           <p className="inline-block text-white m-0 ">Kunyomi: </p>
-          <p className="text-white m-0 mx-2" style={{display:display.furigana}}>{kunyomi}</p>
+          {
+            kunyomi.map((kunyomi,i)=>{
+              return(
+                <p className="text-white m-0 mx-1" style={{display:display.furigana}}>{kunyomi}</p>
+              )
+            })
+          }
         </div>
+
         {showKanji ? (
             <h1 className="text-white kanji-title py-3 m-0">{character}</h1>
           ):(
@@ -45,7 +58,13 @@ const kanjiComponent = (props)=>{
 
         <div className="d-flex flex-row">
           <p className="inline-block text-white m-0 ">Meaning: </p>
-          <p className="text-white m-0 mx-2" style={{display:display.english}}>{meaning}</p>
+          {
+            meaning.map((meaning,i)=>{
+              return(
+                <p className="text-white m-0 mx-1" style={{display:display.furigana}}>{meaning}</p>
+              )
+            })
+          }
         </div>
 
         <p className="text-white m-0"> id: {id}</p>
